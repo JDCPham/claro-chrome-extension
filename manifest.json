@@ -1,0 +1,36 @@
+{
+    "name": "Claro Money Widget (Development)",
+    "version": "0.0.0",
+    "description": "An extension from Claro Money that will tell you how many hours you will have to work to buy a product!",
+    "manifest_version": 2,
+    "permissions": ["storage", "declarativeContent", "activeTab"],
+    "options_page": "app/options/options.html",
+    "background": {
+        "scripts": ["app/background.js"],
+        "persistent": false
+    },
+    "content_scripts" : [{
+        "matches" : [ "*://www.amazon.co.uk/gp/cart/*"],
+        "js" : ["app/scripts/currency.js", "app/content/amazon.js"],
+        "css": ["app/styles/fonts.css"]
+    }],
+    "page_action": {
+        "default_popup": "app/popup/index.html",
+        "default_icon": {
+            "16": "images/icons/claro_16.png",
+            "32": "images/icons/claro_32.png",
+            "48": "images/icons/claro_48.png",
+            "128": "images/icons/claro_128.png"
+        }
+    },
+    "web_accessible_resources": [
+        "app/fonts/*",
+        "images/*"
+    ],
+    "icons": {
+        "16": "images/icons/claro_16.png",
+        "32": "images/icons/claro_32.png",
+        "48": "images/icons/claro_48.png",
+        "128": "images/icons/claro_128.png"
+    }
+}

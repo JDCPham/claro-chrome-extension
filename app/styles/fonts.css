@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src:  url("chrome-extension://__MSG_@@extension_id__/app/fonts/Gilroy-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: bolder;
+    font-display: swap;
+    src:  url('chrome-extension://__MSG_@@extension_id__/app/fonts/Gilroy-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src:  url('chrome-extension://__MSG_@@extension_id__/app/fonts/Gilroy-ExtraBold.otf') format('opentype');
+}

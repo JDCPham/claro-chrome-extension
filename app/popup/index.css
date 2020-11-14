@@ -1,0 +1,83 @@
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.mt-1 {
+    margin-top: 5px;
+}
+
+.mt-2 {
+    margin-top: 10px;
+}
+
+.mt-3 {
+    margin-top: 15px;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #9DCEA3;
+    width: 200px;
+    padding: 20px;
+    font-family: 'Gilroy';
+    color: #CC2C4F;
+}
+
+p {
+    margin: 0;
+}
+
+#claro-title {
+    font-size: 16px;
+}
+
+#annual-salary {
+    font-size: 26px;
+}
+
+#options-button {
+    border-radius: 30px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #CC2C4F;
+    color: #9DCEA3;
+    font-family: 'Gilroy';
+    border: none;
+    outline: none;
+    background-color: #9DCEA3;
+    color: #CC2C4F;
+    border: 2px solid #CC2C4F;
+}
+
+#options-button:hover {
+    background-color: #CC2C4F;
+    color: #9DCEA3;
+    border: none;
+}
