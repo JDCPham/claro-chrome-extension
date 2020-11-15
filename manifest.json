@@ -3,7 +3,12 @@
     "version": "0.0.0",
     "description": "An extension from Claro Money that will tell you how many hours you will have to work to buy a product!",
     "manifest_version": 2,
-    "permissions": ["storage", "declarativeContent", "activeTab", "https://www.income-tax.co.uk/api/*"],
+    "permissions": [
+        "storage",
+        "declarativeContent",
+        "activeTab",
+        "https://www.income-tax.co.uk/api/*"
+    ],
     "options_page": "app/options/options.html",
     "background": {
         "scripts": ["app/background.js"],
@@ -11,7 +16,11 @@
     },
     "content_scripts" : [{
         "matches" : [ "*://www.amazon.co.uk/gp/cart/*"],
-        "js" : ["app/scripts/currency.js", "app/content/amazon.js"],
+        "js" : ["app/scripts/currency.js", "app/content/amazon/amazon-cart.js"],
+        "css": ["app/styles/fonts.css"]
+    }, {
+        "matches" : [ "*://www.asos.com/bag*"],
+        "js" : ["app/scripts/currency.js", "app/content/asos/asos-bag.js"],
         "css": ["app/styles/fonts.css"]
     }],
     "page_action": {

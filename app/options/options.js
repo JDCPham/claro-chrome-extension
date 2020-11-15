@@ -28,9 +28,12 @@ updateButton.addEventListener('click', () => {
             setStorage(salary, hours)
 
         })
-        .done(function () {
+        .done(function (data) {
+            console.log(data)
             setInputFromStorage();
-            alert("success")
+            alert(`Set Take Home (Annual): £${data['take_home']['yearly']}
+                   Set Take Home (Daily): £${data['take_home']['daily']}
+                   Set Daily Hours: ${dailyHoursInput.value} hours`)
         })
         .fail(function () {
             //alert( "error" );

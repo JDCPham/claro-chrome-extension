@@ -8,12 +8,12 @@ chrome.storage.sync.get(['salary', 'hours'], data => {
 
     // Calculate hours worked required.
     let hoursRequired = currency(basketSubtotal).divide(hourlySalary).value;
-
+    
     // Get Form Element.
-    var cartViewFormElement = document.getElementById("gutterCartViewForm");
+    var cartViewElement = document.getElementById("sc-buy-box");
 
-    // Append Elements
-    cartViewFormElement.insertBefore(createClaroElement(hoursRequired), cartViewFormElement.firstChild)
+    // Append Element.
+    cartViewElement.parentNode.insertBefore(createClaroElement(hoursRequired), cartViewElement.nextElementSibling)
 
 });
 
