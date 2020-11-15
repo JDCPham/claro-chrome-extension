@@ -1,21 +1,51 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <style>
-        button {
-          height: 30px;
-          width: 30px;
-          outline: none;
-          margin: 10px;
-        }
-      </style>
-    </head>
-    <body>
-      <div id="buttonDiv">
-      </div>
-      <div>
-        <p>Choose a different background color!</p>
-      </div>
-    </body>
-    <script src="options.js"></script>
-  </html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../styles/bootstrap.css">
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="d-flex flex-column align-items-center">
+            <h1 class="pink">Claro Extension Configurations</h1>
+            <form class="d-flex flex-column align-items-center mt-4" style="width: 300px">
+
+                <!-- Annual Salary -->
+                <div class="form-group w-100">
+                    <label>Annual Salary</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">GBP</span>
+                        </div>
+                        <input type="text" class="form-control" id="annual-salary">
+                    </div>
+                </div>
+
+                <!-- Hours per day -->
+                <div class="form-group w-100">
+                    <label>Daily Hours</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Hours</span>
+                        </div>
+                        <input type="text" class="form-control" id="daily-hours">
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary" id="update-button">Submit</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+<!-- Scripts -->
+<script src="../scripts/jquery.js"></script>
+<script src="../scripts/bootstrap.js"></script>
+<script src="options.js"></script>
+
+
+</html>

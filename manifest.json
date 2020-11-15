@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "description": "An extension from Claro Money that will tell you how many hours you will have to work to buy a product!",
     "manifest_version": 2,
-    "permissions": ["storage", "declarativeContent", "activeTab"],
+    "permissions": ["storage", "declarativeContent", "activeTab", "https://www.income-tax.co.uk/api/*"],
     "options_page": "app/options/options.html",
     "background": {
         "scripts": ["app/background.js"],

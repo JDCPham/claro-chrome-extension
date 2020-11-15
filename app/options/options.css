@@ -1,0 +1,9 @@
+h1, h2, h3, h4, h5, h6, label, p {
+    font-family: 'Gilroy';
+    margin: 0;
+    padding: 0;
+}
+
+.pink {
+    color: #CC2C4F;
+}
