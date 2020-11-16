@@ -1,11 +1,17 @@
-// Get options button.
-var optionsButton = document.getElementById("options-button");
+function loadPopup(url, id) {
 
-// Set event listener.
-optionsButton.addEventListener("click", () => {
-    openOptions();
-})
+    // Get Query and Page Title.
+    let { query, title } = getDetails(url)
 
-function openOptions() {
-    window.open("chrome-extension://jiklkpjoiaganoomocngfdafbjmcomne/app/options/options.html")
+    // Set Page Host.
+    pageHostText.innerText = url['hostname'];
+
+}
+
+
+function getDetails(url) {
+    return {
+        query: "span#sc-subtotal-amount-buybox > span.a-size-medium.a-color-base.sc-price.sc-white-space-nowrap",
+        title: "Amazon UK"
+    }
 }

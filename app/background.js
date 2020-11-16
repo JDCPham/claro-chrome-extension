@@ -27,6 +27,10 @@ chrome.runtime.onInstalled.addListener(() => {
       daily: {
         gross: 134.62,
         net: 105.54
+      },
+      hourly: {
+        gross: 4,
+        net: 13
       }
     },
     hours: {

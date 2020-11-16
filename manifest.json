@@ -25,6 +25,7 @@
     }],
     "page_action": {
         "default_popup": "app/popup/index.html",
+        "default_tooltip":"Claro Money Extension",
         "default_icon": {
             "16": "images/icons/claro_16.png",
             "32": "images/icons/claro_32.png",
