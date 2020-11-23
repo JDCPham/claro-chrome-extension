@@ -15,13 +15,9 @@
         "persistent": false
     },
     "content_scripts" : [{
-        "matches" : [ "*://www.amazon.co.uk/gp/cart/*"],
-        "js" : ["app/scripts/currency.js", "app/content/amazon/amazon-cart.js"],
-        "css": ["app/styles/fonts.css"]
-    }, {
-        "matches" : [ "*://www.asos.com/bag*"],
-        "js" : ["app/scripts/currency.js", "app/content/asos/asos-bag.js"],
-        "css": ["app/styles/fonts.css"]
+        "matches" : [ "*://www.amazon.co.uk/*"],
+        "js" : ["app/scripts/currency.js", "app/scripts/jquery.js", "app/scripts/bootstrap.js", "app/content/content.js"],
+        "css": ["app/styles/fonts.css", "app/styles/bootstrap.css"]
     }],
     "page_action": {
         "default_popup": "app/popup/index.html",
@@ -35,7 +31,8 @@
     },
     "web_accessible_resources": [
         "app/fonts/*",
-        "images/*"
+        "images/*",
+        "app/options/angular/*"
     ],
     "icons": {
         "16": "images/icons/claro_16.png",

@@ -46,3 +46,8 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    console.log(sender)
+    console.log(request)
+  });

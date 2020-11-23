@@ -13,6 +13,18 @@
             <h1 class="pink">Claro Extension Configurations</h1>
             <form class="d-flex flex-column align-items-center mt-4" style="width: 300px">
 
+                <!-- Email Address -->
+                <div class="form-group w-100">
+                    <label>Email Address</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="email-address">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="register-button">Register</button>
+                          </div>
+                        
+                    </div>
+                </div>
+
                 <!-- Annual Salary -->
                 <div class="form-group w-100">
                     <label>Annual Salary</label>
@@ -20,22 +32,12 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">GBP</span>
                         </div>
-                        <input type="text" class="form-control" id="annual-salary">
+                        <input type="text" class="form-control" id="annual-salary" disabled>
                     </div>
                 </div>
 
-                <!-- Hours per day -->
-                <div class="form-group w-100">
-                    <label>Daily Hours</label>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Hours</span>
-                        </div>
-                        <input type="text" class="form-control" id="daily-hours">
-                    </div>
-                </div>
 
-                <button type="button" class="btn btn-primary" id="update-button">Submit</button>
+                <button type="button" class="btn btn-primary" id="update-button" disabled>Submit</button>
             </form>
 
         </div>

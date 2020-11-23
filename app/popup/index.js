@@ -2,9 +2,10 @@ function loadPopup(url, id) {
 
     // Get Query and Page Title.
     let { query, title } = getDetails(url)
-
+    
     // Set Page Host.
     pageHostText.innerText = url['hostname'];
+
 
 }
 

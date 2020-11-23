@@ -1,27 +1,8 @@
-function processTabURL([{ url: fullUrl, id: id }] = null) {
-
-    try {
-
-        // Parse URL.
-        const url = new URL(fullUrl);
-
-        // Pass Host Path URL to Load Popup Function.
-        loadPopup(url, id);
-
-    } catch (error) {
-
-        // Pass null to Load Popup Function.
-        loadPopup(null, null);
-
-    }
-
-}
-
-
 chrome.tabs.query({
     active: true,
     currentWindow: true
 }, processTabURL)
+
 
 chrome.storage.sync.get(['salary', 'hours'], ({salary, hours}) => {
 
@@ -33,3 +14,15 @@ chrome.storage.sync.get(['salary', 'hours'], ({salary, hours}) => {
     dailyHoursWorkedText.innerText = hours['daily'];
     netHourlySalaryText.innerText = currency(salary['hourly']['net']).format({symbol:''});
 })
+
+function processTabURL([{ url, id }]) {
+
+    // Get Price Selector
+    let priceQuerySelector = "span#sc-subtotal-amount-buybox > span.a-size-medium.a-color-base.sc-price.sc-white-space-nowrap";
+
+    chrome.runtime.sendMessage({
+        purpose: "PRICE_REQUEST",
+        query: priceQuerySelector
+    }, () => {});
+}
+
