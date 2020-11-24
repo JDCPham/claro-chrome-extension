@@ -56,6 +56,7 @@ function generateElement(price, workHours) {
 
 
     var banner = document.createElement("div");
+    banner.id = "claro-money-banner";
     banner.style.display = "flex";
     banner.style.justifyContent = "space-between";
     banner.style.alignItems = "center";
@@ -68,15 +69,24 @@ function generateElement(price, workHours) {
     refreshButton.classList.add('btn');
     refreshButton.classList.add('btn-primary');
     refreshButton.innerText = "Refresh";
+    refreshButton.addEventListener('click', () => {
+        removeExistingBanner();
+        getQuery(location.href)
+    })
 
     var workHoursText = document.createElement("div");
     workHoursText.innerHTML = `Price: £${price} // Work Hours: ${workHours}`;
 
     banner.appendChild(workHoursText);
     banner.appendChild(refreshButton)
-    console.log(banner)
 
     // Get Body.
     document.body.insertBefore(banner, document.body.childNodes[0]);
 
+}
+
+
+function removeExistingBanner() {
+    var banner = document.getElementById('claro-money-banner');
+    banner.parentNode.removeChild(banner);
 }

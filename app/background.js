@@ -2,10 +2,10 @@
 const rule1 = {
   conditions: [
     new chrome.declarativeContent.PageStateMatcher({
-      pageUrl: { hostEquals: 'www.asos.com', pathEquals: '/bag' }
+      pageUrl: { hostEquals: 'www.asos.com' }
     }),
     new chrome.declarativeContent.PageStateMatcher({
-      pageUrl: { hostEquals: 'www.amazon.co.uk', pathEquals: '/gp/cart/view.html' }
+      pageUrl: { hostEquals: 'www.amazon.co.uk' }
     })
   ],
   actions: [
@@ -14,40 +14,28 @@ const rule1 = {
 };
 
 
-
 chrome.runtime.onInstalled.addListener(() => {
 
-  // Set Default Annual Salary.
+
+  /************************/
+  /** SET DEFAULT SALARY **/
+  /************************/
   chrome.storage.sync.set({
     salary: {
-      annual: {
-        gross: 35000.00,
-        net: 27440.00
-      },
-      daily: {
-        gross: 134.62,
-        net: 105.54
-      },
-      hourly: {
-        gross: 4,
-        net: 13
-      }
+      annual: { gross: 35000.00, net: 27440.00 },
+      daily: { gross: 134.62, net: 105.54 },
+      hourly: { gross: 4, net: 13 }
     },
-    hours: {
-      daily: 8
-    }
+    hours: { daily: 8 },
+    email: null
   })
 
-  // Set Declarative Content Events.
+
+  /************************/
+  /****** ADD RULES *******/
+  /************************/
   chrome.declarativeContent.onPageChanged.removeRules(undefined, () => {
     chrome.declarativeContent.onPageChanged.addRules([rule1]);
   });
 
 });
-
-
-
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    console.log(sender)
-    console.log(request)
-  });

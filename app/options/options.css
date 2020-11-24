@@ -7,3 +7,10 @@ h1, h2, h3, h4, h5, h6, label, p {
 .pink {
     color: #CC2C4F;
 }
+
+#verify-email-notice {
+    font-weight: normal;
+    font-size: 11px;
+    color: #CC2C4F;
+    display: none;
+}
