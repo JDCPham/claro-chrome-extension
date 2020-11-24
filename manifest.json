@@ -15,7 +15,7 @@
         "persistent": false
     },
     "content_scripts" : [{
-        "matches" : [ "*://www.amazon.co.uk/*"],
+        "matches" : ["*://*/*"],
         "js" : ["app/scripts/currency.js", "app/scripts/jquery.js", "app/scripts/bootstrap.js", "app/content/content.js"],
         "css": ["app/styles/fonts.css", "app/styles/bootstrap.css"]
     }],
