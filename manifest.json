@@ -17,7 +17,7 @@
     "content_scripts" : [{
         "matches" : ["*://*/*"],
         "js" : ["app/scripts/currency.js", "app/scripts/jquery.js", "app/scripts/bootstrap.js", "app/content/content.js"],
-        "css": ["app/styles/fonts.css", "app/styles/bootstrap.css"]
+        "css": ["app/styles/fonts.css"]
     }],
     "page_action": {
         "default_popup": "app/popup/index.html",

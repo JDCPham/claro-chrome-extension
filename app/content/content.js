@@ -84,6 +84,9 @@ function generateElement(price, workHours) {
     refreshButton.style.backgroundColor = "#9DCEA3";
     refreshButton.style.color = "#CC2C4F";
     refreshButton.style.borderRadius = "30px";
+    refreshButton.style.border = "none";
+    refreshButton.style.paddingTop = "10px";
+    refreshButton.style.paddingBottom = "10px";
     refreshButton.style.fontFamily = "Gilroy";
     refreshButton.style.paddingLeft = "20px";
     refreshButton.style.paddingRight = "20px";
